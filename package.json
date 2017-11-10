@@ -9,7 +9,7 @@
   "author": "",
   "license": "UNLICENSED",
   "dependencies": {
-    "woleet-weblibs": "^0.3.5"
+    "woleet-weblibs": "^0.4.4"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

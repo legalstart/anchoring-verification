@@ -3,17 +3,14 @@
 import woleet from 'woleet-weblibs'
 import { setRandomAPI } from './blockchainlib'
 import { sortedConcat } from './concatlib'
+import { targetHashOfReceipt } from './chainpointlib'
 import { hashingOf, readingFile } from './lib'
 
 
-const _receiptHasHash = (receipt, hash) => {
-  if (receipt.target.target_hash !== hash) {
+const checkingReceiptHasHash = async (receipt, hash) => {
+  if (targetHashOfReceipt(receipt) !== hash) {
     throw new Error("target_hash_mismatch")
   }
-}
-
-const checkingReceiptHasHash = async (receipt, hash) => {
-  _receiptHasHash(receipt, hash)
 }
 
 /**
